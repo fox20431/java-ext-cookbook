@@ -10,10 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.tomcat.embed:tomcat-embed-core:10.1.6")
-    // Tomcat's JSP Engine.
-    implementation("org.apache.tomcat.embed:tomcat-embed-jasper:10.1.16")
-
+    implementation("org.apache.tomcat.embed:tomcat-embed-core:10.1.7")
+    implementation("org.apache.tomcat.embed:tomcat-embed-jasper:10.1.7")
 }
 
 tasks.withType<Test> {
