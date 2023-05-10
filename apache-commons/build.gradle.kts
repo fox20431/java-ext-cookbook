@@ -1,4 +1,4 @@
-group = "com.hihusky.apache-commons"
+group = "com.hihusky.apachecommons"
 version = "1.0-SNAPSHOT"
 
 dependencies {

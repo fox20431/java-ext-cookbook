@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/log" />
             <option value="$PROJECT_DIR$/reactor" />
             <option value="$PROJECT_DIR$/rxjava" />
+            <option value="$PROJECT_DIR$/testcontainers" />
             <option value="$PROJECT_DIR$/tomcat" />
             <option value="$PROJECT_DIR$/tomcat-embed" />
             <option value="$PROJECT_DIR$/wiremock" />

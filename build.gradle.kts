@@ -1,5 +1,5 @@
 plugins {
-    java
+    application
 }
 
 group = "com.hihusky"
@@ -11,27 +11,39 @@ repositories {
     gradlePluginPortal()
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+ext {
+    set("lombokVersion", "1.18.26")
+    set("junitVersion", "5.9.2")
+    set("logbackVersion", "1.4.6")
 }
 
 subprojects {
-    // java plugin
     apply(plugin = "java")
 
     repositories {
         mavenCentral()
     }
 
-    dependencies {
-        testImplementation(platform("org.junit:junit-bom:5.9.1"))
-        testImplementation("org.junit.jupiter:junit-jupiter")
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 
-        compileOnly("org.projectlombok:lombok:1.18.22")
-        annotationProcessor("org.projectlombok:lombok:1.18.22")
-        testCompileOnly("org.projectlombok:lombok:1.18.22")
-        testAnnotationProcessor("org.projectlombok:lombok:1.18.22")
+    dependencies {
+        // log
+        implementation("org.slf4j:slf4j-api:2.0.5")
+        implementation("ch.qos.logback:logback-core:${property("logbackVersion")}")
+        implementation("ch.qos.logback:logback-classic:${property("logbackVersion")}")
+
+        // lombok
+        implementation("org.projectlombok:lombok:${property("lombokVersion")}")
+        annotationProcessor("org.projectlombok:lombok:${property("lombokVersion")}")
+        testImplementation("org.projectlombok:lombok:${property("lombokVersion")}")
+        testAnnotationProcessor("org.projectlombok:lombok:${property("lombokVersion")}")
+
+        // junit
+        testImplementation(platform("org.junit:junit-bom:${property("junitVersion")}"))
+        testImplementation("org.junit.jupiter:junit-jupiter:${property("junitVersion")}")
     }
 
     tasks.withType<Test> {

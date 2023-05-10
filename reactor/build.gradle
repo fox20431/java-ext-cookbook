@@ -1,4 +1,4 @@
 dependencies {
-    testImplementation 'org.assertj:assertj-core:3.23.1'
-    implementation 'io.projectreactor:reactor-core:3.4.23'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+    implementation 'io.projectreactor:reactor-core:3.5.4'
 }
