@@ -14,8 +14,10 @@
             <option value="$PROJECT_DIR$/h2-database" />
             <option value="$PROJECT_DIR$/jackson" />
             <option value="$PROJECT_DIR$/jdbc" />
+            <option value="$PROJECT_DIR$/kafka" />
             <option value="$PROJECT_DIR$/log" />
             <option value="$PROJECT_DIR$/reactor" />
+            <option value="$PROJECT_DIR$/redis-database" />
             <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/testcontainers" />
             <option value="$PROJECT_DIR$/tomcat" />
