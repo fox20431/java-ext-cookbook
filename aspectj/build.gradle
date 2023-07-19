@@ -11,24 +11,3 @@ dependencies {
     implementation group: 'org.aspectj', name: 'aspectjrt', version: '1.9.19'
     implementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.19'
 }
-
-// compileJava {
-//     ajc {
-//         enabled = true
-//         classpath
-//         options {
-//             aspectpath.setFrom configurations.aspect
-//             compilerArgs = []
-//         }
-//     }
-// }
-// compileTestJava {
-//     ajc {
-//         enabled = true
-//         classpath
-//         options {
-//             aspectpath.setFrom configurations.testAspect
-//             compilerArgs = []
-//         }
-//     }
-// }
