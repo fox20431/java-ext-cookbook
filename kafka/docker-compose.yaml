@@ -3,7 +3,7 @@ version: "3.8"
 services:
   kafka:
     build:
-      context: ./_docker/kafka/
+      context: ./docker/kafka/
       dockerfile: Dockerfile
     image: fox20431/kafka:latest
     restart: no

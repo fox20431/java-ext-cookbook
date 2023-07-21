@@ -1,5 +1,9 @@
 rootProject.name = "java-ext-cookbook"
 
+plugins {
+    id("com.gradle.enterprise") version "3.12.6"
+}
+
 include("h2-database")
 include("tomcat")
 include("tomcat-embed")

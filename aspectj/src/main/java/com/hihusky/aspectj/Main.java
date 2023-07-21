@@ -1,4 +1,4 @@
-package com.hihusky;
+package com.hihusky.aspectj;
 
 public class Main {
 
@@ -12,3 +12,4 @@ public class Main {
         proxy.perform();
     }
 }
+

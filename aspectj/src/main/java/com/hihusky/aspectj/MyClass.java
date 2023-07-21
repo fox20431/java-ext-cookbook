@@ -1,4 +1,4 @@
-package com.hihusky;
+package com.hihusky.aspectj;
 
 public class MyClass {
     public void perform() {

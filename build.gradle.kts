@@ -1,5 +1,5 @@
 plugins {
-    application
+    java
 }
 
 group = "com.hihusky"
@@ -11,13 +11,8 @@ repositories {
     gradlePluginPortal()
 }
 
-ext {
-    set("lombokVersion", "1.18.26")
-    set("junitVersion", "5.9.2")
-    set("logbackVersion", "1.4.6")
-}
-
 subprojects {
+
     apply(plugin = "java")
 
     repositories {
