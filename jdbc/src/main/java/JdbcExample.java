@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class JdbcExample {
     public static void main(String[] args) {
         // JDBC连接信息
-        String url = "jdbc:postgresql://localhost:15432/postgres"; // 根据实际数据库信息修改
+        String url = "jdbc:postgresql://localhost:5432/postgres"; // 根据实际数据库信息修改
         String username = "postgres"; // 根据实际数据库用户名修改
         String password = "postgres"; // 根据实际数据库密码修改
         String initFileName = "init.sql";
