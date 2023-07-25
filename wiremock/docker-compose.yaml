@@ -4,6 +4,6 @@ services:
     image: wiremock/wiremock:2.35.0
     restart: on-failure
     ports:
-      - 8080:8080
+      - "8080:8080"
     volumes:
       - ./wiremock:/home/wiremock

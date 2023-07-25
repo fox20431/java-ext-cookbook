@@ -1,23 +1,27 @@
-# README
+# Tomcat
 
-## Deploy Tutorial
+## 开发环境运行
 
-New Project -> Gradle -> Java & Web(war)
+Edit `run configuration`, add `tomcat server` and configure the application server(add the path of tomcat). Then set deployment, add the artifact name `xxx-war(exploded)`.
 
-Optional step: File -> project structure -> module -> main -> specify the `web.xml` file when tomcat run.
+* `exploded` is the exploded war file, which is the directory of the war file.
 
-Edit 'run' configuration, add `tomcat server` and configure the application server(add the path of tomcat). Then set deployment, add the artifact name `xxx-war(exploded)`.
+## 生产环境运行
 
-tips: tomcat directory and file need the `x` authorization.
+使用Gradle构建工具构建war包：
 
----
+```shell
+./gradlew :tomcat:build
+```
 
-`exploded` means than instead of deploying a WAR/EAR file to your application server to test your application you point your application server at a folder containing the unzipped (exploded) contents of what would be inside the WAR/EAR file.
+将再 `tomcat` 目录下生成 `./build/libs/xxx.war` 文件。
 
-This makes development quicker as most application servers support Hot Deploy where you can change the code/JSPs etc and these changes will be reflected almost immediately in the running application.
+将 `tomcat.war` 文件拷贝到 `tomcat` 的 `webapps` 目录下，启动tomcat：
 
-The Tomcat plugin in Eclipse essentially uses this technique. The only thing to be careful of is that after many hot deploys most application servers start to run out of memory in the PermGen space and need restarting (well i've had this problem with Weblogic and Tomcat).
+```shell
+$TOMCAT_HOME/bin/catalina.sh start
+```
 
-
+war包将自动解压，访问URL的时候记得加上路径。
 
 

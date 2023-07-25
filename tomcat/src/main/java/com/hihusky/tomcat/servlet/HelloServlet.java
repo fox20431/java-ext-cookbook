@@ -1,4 +1,4 @@
-package com.hihusky.tomcatdemo.servlet;
+package com.hihusky.tomcat.servlet;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;

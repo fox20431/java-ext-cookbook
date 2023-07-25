@@ -1,12 +1,12 @@
-package com.hihusky.tomcatdemo.filter;
+package com.hihusky.tomcat.filter;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "SecondFilter")
-public class SecondFilter implements Filter {
+@WebFilter(filterName = "FirstFilter")
+public class FirstFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
     }
 
@@ -15,7 +15,7 @@ public class SecondFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-        System.out.println("Second Filter");
+        System.out.println("First Filter");
         chain.doFilter(request, response);
     }
 }
